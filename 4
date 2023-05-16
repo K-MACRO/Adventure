@@ -1,0 +1,40 @@
+using System;
+
+namespace AdventureGame
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Welcome to the Adventure Game!");
+            Console.WriteLine("You find yourself in a dark room.");
+
+            while (true)
+            {
+                Console.Write("What do you want to do? ");
+                string input = Console.ReadLine();
+
+                if (input.ToLower() == "look around")
+                {
+                    Console.WriteLine("You see a key on the table.");
+                }
+                else if (input.ToLower() == "take key")
+                {
+                    Console.WriteLine("You take the key.");
+                    Console.WriteLine("You can use the key to unlock the door.");
+                }
+                else if (input.ToLower() == "open door")
+                {
+                    Console.WriteLine("Congratulations! You escaped the room.");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("I'm sorry, I don't understand.");
+                }
+            }
+
+            Console.WriteLine("Game over!");
+        }
+    }
+}
